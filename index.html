@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
     <link rel='stylesheet' href='css/style.css'>
     <title>Todoolean</title>
 </head>
 <body>
+    <div class="container">
+        <p>Per modificare una nota inserisci il testo nel campo input e poi premi la    matita sulla nota che vuoi modificare</p>
+        <input type="text" name="new-note" id="input-note" placeholder="Scrivi qualcosa">
+        <button id="send-note">Inserisci nota</button>
+        <ul class="note-container"></ul>
+        <ul class="done-note-container"></ul>
+    </div>
+    <script id="note-template" type="text/x-handlebars-template">
+        <li data-id="{{id}}" class="note-element">
+            <input type="checkbox" class="note-done">
+            <p class="note-text">{{text}}</p>
+            <div class="modify-note">
+                <i class="fas fa-pencil-alt modify"></i>
+                <i class="fas fa-trash-alt delete"></i>
+            </div>
+        </li>
+    </script>
+    <script id="done-note-template" type="text/x-handlebars-template">
+        <li data-id="{{id}}" class="note-element">
+            <input type="checkbox" class="note-done" checked>
+            <p class="note-text">{{text}}</p>
+        </li>
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing:border-box;
  }	
+
+ body{
+     background-color: grey;
+     color:#000;
+ }
+
+
+
+
+
+
+
+.note-container li{
+    width: 300px;
+    background-color: lightblue;
+    border:1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done-note-container li{
+    border-top:10px solid red;
+    width: 300px;
+    background-color: lightgrey;
+    border:1px solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
