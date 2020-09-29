@@ -1,4 +1,3 @@
-
  //L'esercizio di oggi è quello di creare, come fatto in aula, una todo list sulla quale sarà possibile svolgere le operazioni di CRUD, usando qusta Api: http://157.230.17.132:3021/todos
 
 
@@ -55,13 +54,13 @@ function getList(){
 
 
 function printToDoList(data){
-    var source = $("#note-template").html();
-    var template = Handlebars.compile(source);
-
-    var destination = $(".note-container");
-
-
     for(var i=0; i<data.length;i++){
+        var source = $("#note-template").html();
+        var template = Handlebars.compile(source);
+    
+
+        
+        var destination = $(".note-container");
 
         var context = {
             "text": data[i].text,
@@ -76,7 +75,7 @@ function printToDoList(data){
             destination = $(".done-note-container")
         }
 
-        console.log(data[i].done);
+        console.log(done);
 
 
 
